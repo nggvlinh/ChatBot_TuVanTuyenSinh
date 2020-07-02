@@ -1,0 +1,87 @@
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - tuvan_mn
+  - tuvan_tt
+  - tuvan_ct
+  - tuvan_dtt
+  - tuvan_gt
+  - tuvan_vtvl
+  - tuvan_nlv
+
+entities:
+  - mn
+  - tt
+  - ct
+  - dtt
+  - gt
+  - vtvl
+  - nlv
+
+slots:
+  mn:
+    auto_fill: true
+    type : text
+  tt:
+    auto_fill: true
+    type: text
+  ct:
+    auto_fill: true
+    type: text
+  dtt:
+    auto_fill: true
+    type: text
+  gt:
+    auto_fill: true
+    type: text
+  vtvl:
+    auto_fill: true
+    type: text
+  nlv:
+    auto_fill: true
+    type: text
+
+responses:
+  utter_greet:
+  - text: "Xin chào! Bạn khỏe không ?"
+
+  utter_cheer_up:
+  - text: "Đây ! có lẽ nó sẽ mang đến điều thú vị cho bạn:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Tôi có thể giúp gì cho bạn ?"
+
+  utter_happy:
+  - text: "Tuyệt! Tôi có thể tư vấn gì cho bạn ?"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "Tôi là người máy."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+actions:
+  - action_mn
+  - action_ct
+  - action_tt
+  - action_dtt
+  - action_gt
+  - action_vtvl
+  - action_nlv
+  - utter_goodbye
+  - utter_iamabot
+  - utter_happy
+  - utter_did_that_help
+  - utter_cheer_up
+  - utter_greet
+
