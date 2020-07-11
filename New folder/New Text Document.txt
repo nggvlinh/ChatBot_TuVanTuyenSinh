@@ -1,0 +1,29 @@
+
+language: vi
+pipeline:
+  -
+    name: WhitespaceTokenizer
+  -
+    name: RegexFeaturizer
+  -
+    name: CRFEntityExtractor
+  -
+    name: EntitySynonymMapper
+  -
+    name: CountVectorsFeaturizer
+  -
+    analyzer: char_wb
+    max_ngram: 4
+    min_ngram: 1
+    name: CountVectorsFeaturizer
+  -
+    name: DIETClassifier
+    epochs: 100
+
+
+# Configuration for Rasa Core.
+# https://rasa.com/docs/rasa/core/policies/
+policies:
+  - name: MemoizationPolicy
+  - name: TEDPolicy
+  - name: MappingPolicy
